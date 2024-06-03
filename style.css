@@ -1,0 +1,155 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+
+a:active,
+a:hover,
+a{
+    text-decoration: none;
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    width: 100vw;
+    display: flex;
+    /* height: 10vh; */
+    /* background-color: white; */
+}
+
+
+
+button{
+    cursor: pointer;
+}
+
+p, a, li, button{
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2,h3, h4, h5, h6 {
+    font-family: "Neucha", cursive;
+}
+
+.nav ul {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    
+    min-height: 50px; 
+    
+    
+}
+
+body nav ul li a{
+    color: black;
+    
+}
+
+.nav_mob{
+    display: none;
+}
+
+.nav{
+    background-color: white;
+    opacity: 1;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 7vh;
+    border-bottom: 1px black solid;
+}
+
+.container {
+    width: 100%;
+    min-width: 1300px;
+    /*  */
+    overflow: hidden;
+}
+
+.block_first {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+}
+
+.back_img_first{
+    background-image: url("./img/background_block_first.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.block_front{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 26%;
+    min-width: 450px;
+    margin-left: 20%;
+    height: 100%;
+    min-height: 500px;
+    padding: 0 3% 0 3%;
+    background-color: white;
+}
+
+
+.block_front h1 {
+    word-wrap: break-word;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.block_front p {
+    font-size: 1.3rem;
+    
+}
+
+.block_front button {
+    width: 60%;
+    height: 7vh;
+    color: white;
+    background-color: #50aeab;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 1vh;
+    font-weight: 600;
+    font-family: "Neucha", cursive;
+    color: #ebecf4;
+}
+
+.block_second {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

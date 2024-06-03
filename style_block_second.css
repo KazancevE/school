@@ -1,0 +1,161 @@
+main{
+    padding-top: 7vh;
+}
+
+.main_road {
+    padding-top: 3%;
+    width: 100%;
+    background-color: #ebecf4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_road > h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 2%;
+}
+
+
+.roadmap{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; 
+    width: inherit;
+    min-width: 1300px;
+    height: auto;
+    
+}
+
+.roadmap_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    min-width: 1300px;
+}
+
+.roadmap_item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    min-width: 250px;
+    height: 20%;
+    min-height: 200px;
+    border: solid #50aeab 3px;
+    border-radius: 1vh;
+    margin: 1%;
+    /* overflow: hidden; */
+    
+}
+
+.roadmap_item > *{
+    margin-bottom: auto;
+}
+
+.roadmap_bar{
+    display: flex;
+    justify-content: center;
+    background-color: #50aeab;
+    width: 101.5%;
+    height: 3vh;
+    border-radius: 1vh;
+}
+
+.bar_violet{
+    background-color: #783bdd;
+}
+
+.roadmap_item > div > h2{
+    font-size: 1.1rem;
+    color: #ebecf4;
+}
+
+.roadmap_item > p{
+    padding: 5%;
+    font-weight: 600;
+}
+
+.roadmap_btn {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.roadmap_btn_mob{
+    display: none;
+}
+
+.roadmap_item > p{
+    font-size: 0.85rem;
+    text-align: center;
+}
+.btn_level{
+    width: 20%;
+    height: 100%;
+    background-color: #50aeab;
+    border: #50aeab solid 2px;
+    border-radius: 1vh;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Neucha", cursive;
+    color: #ebecf4;
+}
+
+.btn_level[name='Submit']{
+    background-color: #783bdd;
+    border: #783bdd solid 3px;
+    width: 25%;
+    height: 115%;
+}
+
+ .slider {
+    position: relative;
+    width: 300%;
+    height: 70%;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: all 1s;
+    margin: auto;
+    justify-content: center;
+    left: 0;
+}
+
+.row_1{
+    left: -40px;
+}
+
+.row_2{
+    left: 40px;
+}
+
+.border_violet{
+    border: solid #783bdd 3px;
+}
+
+.order_btn{
+    width: 25%;
+    height: 30%;
+    min-height: 45px;
+    margin-bottom: 2%;
+    color: #ebecf4;
+    background-color: #50aeab;
+    border: #50aeab solid 2px;
+    border-radius: 1vh;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Neucha", cursive;
+}
+
+.slider_mob {
+    display: none;
+}
