@@ -1,11 +1,16 @@
+@font-face {
+    font-family: "tele2_displayserif-bold";
+    src: url('./fonts/tele2_displayserif-bold.ttf');
+}
+
 @media (width < 768px) {
      body{
         min-width: 320px;/* overflow: hidden; */
      }  
-   
-
+     
     .nav_mob{
-        background: white;
+        z-index: 1000;
+        background: #50aeab;
         position: fixed;
         height: 7vh;
         width: 100%;
@@ -15,18 +20,40 @@
         align-items: center;
     }
 
+    .nav_mob > h1 {
+        width: 30%;
+        text-align: center;
+        color: #ebecf4;
+
+    }
+
     .nav_mob > ul{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .nav_mob > a {
-        position: fixed;
-    right: 0;
+    .nav_mob_contact{
+        display: flex;
+        width: 30%;
+        align-items: center;
+    }
+
+    .nav_mob_tel {
+        width: 70%;
+        right: 0;
+        font-size: 1.3rem;
+        color: #ebecf4;
+        font-family: "tele2_displayserif-bold";
+    }
+
+    .nav_mob_img{
+        width: 8vw;
     }
 
     .burger_menu{
+        width: 40%;
+        left: 30%;
         top: 1vh;
         position: fixed;
         display: flex;
@@ -34,11 +61,54 @@
         align-items: center;
     }
 
-    .burger{
-        width: 10vw;
-        height: 10vw;
-        background-color: red;
+    
+
+    .burger_menu > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 0 0 1vh 1vh;
+        background-color: #50aeab;
+        transition: 0.7s;
+        position: inherit;
+        left: 0;
+        opacity: 0;
+        top: -100%;
+        width: 40%;
+        left: 30%;
+        padding: 0 1vh;
     }
+
+    .burger[active]{
+        /* color: #783bdd; */
+        transform: scale(1.2);
+    }
+
+    .menu_active{
+        top: 7vh !important; 
+        opacity: 1 !important;
+    }
+    
+    .burger_list  {
+        background-color: #50aeab;
+    }
+
+    .menu_active > li > a{
+        color: #ebecf4;
+        font-weight: 400;
+        font-family: "Neucha", cursive;
+        font-size: 7vw;
+    }
+
+    .burger{
+        width: 30%;
+        text-align: center;
+        color: #ebecf4;
+        transition: 0.7s;
+    }
+
+    
 
     .nav{
         display: none;
@@ -47,9 +117,12 @@
     .container {
         width: 100%;
         min-width: 240px;
-        /*  */
+        
         /* overflow: hidden; */
     }
+
+    
+
     .block_first {
         min-height: 500px;
     }
@@ -84,8 +157,9 @@
     .roadmap_item{
         display: flex;
         align-items: center;
-        min-width: 250px;
-        height: 90%;
+        width: 80vw;
+        min-width: 70vw;
+        height: 80%;
         min-height: 100px;
         border: solid #50aeab 3px;
         border-radius: 1vh;
@@ -159,15 +233,16 @@
     }
     .advantages_list > ul > li > img{
        position: absolute;
-       top: -13vw;
-       width: 25vw; 
+       top: -10vw;
+       width: 18vw;
     }
     
 
 
 /* Заказать звонок */
     .order{
-        min-width: 240px
+        min-width: 240px;
+        padding: 20px 0;
     }
     .order > form {
         flex-direction: column;
@@ -238,8 +313,10 @@
     .btn_level[name='Submit']{
         width: 30%;
     }
-    /* .levels_mob:nth-child(n){
-        height: 100%;
-    } */
+
+   .modal{
+    width: 90%;
+    height: 60%;
+   } 
     
 }

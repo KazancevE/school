@@ -4,58 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style_block_second.css">
     <link rel="stylesheet" href="./advantages.css">
     <link rel="stylesheet" href="./style_footer.css">
     <link rel="stylesheet" href="./style_order.css">
-    <link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" href="./mobile.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_block_second.css">
+    <link rel="stylesheet" href="advantages.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="stylesheet" href="style_order.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body >
     <header class="header">
         <nav class="nav_mob">
-            <div class="burger_menu">
-                <div class="burger"></div>
-                <ul>
-                <li><a href="#">Главное</a></li>
-                <li><a href="#">О Школе</a></li>
-                <li><a href="#">Летний Лагерь</a></li>
-                <li><a href="#">Модули(Учебный план)</a></li>
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Оставить Заявку</a></li>
+            <h1>IBrain</h1>
+            <div class="burger_menu" >
+                <div class="burger" id="burger">
+                    <h1>Menu</h1>
+                </div>
+                <ul id="burger_list">
+                    <li><a href="#block_first">О Школе</a></li>
+                    <!-- <li><a href="#">Летний Лагерь</a></li> -->
+                     
+                    <li><a href="#block_second">Модули</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#contact">Контакты</a></li>
             </ul>
             </div>
+            <div class="nav_mob_contact">
+                <img class="nav_mob_img" src="./img/icon_phone.png" alt="">
+                <a class="nav_mob_tel" href="tel: +7 (3822) 200-615">200-615</a>
+            </div>
             
-            <a href="tel: +7 (3822) 200-615">+7 (3822) 200-615</a>
         </nav>
         <nav class="nav">
+            <h1>IBrain</h1>
             <ul>
-                <li><a href="#">Главное</a></li>
-                <li><a href="#">О Школе</a></li>
-                <li><a href="#">Летний Лагерь</a></li>
-                <li><a href="#">Модули(Учебный план)</a></li>
+                <!-- <li><a href="#">Главное</a></li> -->
+                <li><a href="#block_first">О Школе</a></li>
+                <!-- <li><a href="#">Летний Лагерь</a></li> -->
+                 
+                <li><a href="#block_second">Модули(Учебный план)</a></li>
                 <li><a href="#">Оплата</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Оставить Заявку</a></li>
+                <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <!-- <li><a href="#">Оставить Заявку</a></li> -->
             </ul>
-            <a href="tel: +7 (3822) 200-615">+7 (3822) 200-615</a>
+            
+            <div class="nav_contact">
+                <img class="nav_img" src="./img/icon_phone.png" alt="">
+                <a class="nav_tel" href="tel: +7 (3822) 200-615">+7 (3822) 200-615</a>
+            </div>
         </nav>
     </header>
     <main class="container">
-        <div class="block_first back_img_first">
+        <div id='block_first' class="block_first back_img_first">
             <!-- Блок введение начало -->
             <div class="block_front">
                 <h1>Запишитесь на БЕСПЛАТНОЕ пробное зантие</h1>
                 <p>Наш администратор свяжется с Вами</p>
-                <button>Оставить заявку</button>
+                <button id="open_modal">Оставить заявку</button>
             </div>
             <!-- Блок введение конец -->
         </div>
-        <div class="block_second container">
+        <div id='block_second' class="block_second container">
             <div class="main_road ">
                 <h1>Учебный план</h1>
                 <div class="roadmap_btn_mob">
@@ -270,9 +291,21 @@
                 <button class="order_btn">Оставить заявку</button>
             </div>
         </div>
-    
+        <div class="order">
+            <h1>Блок оставить заявку</h1>
+            <div>
+                <p>Обычная цена - 4000р/месяц</p>
+                <p>При оплате 3х месяцев - 3000р/месяц</p>
+            </div>
+            <form>
+                <input type="text" name="name" id="name" placeholder="Введите имя">
+                <input type="tel" name="tel" id="tel" placeholder="Номер телефона">
+                <input type="text" name="comment" id="comment" placeholder="Комментарий">
+                <input type="button" id="send_order" value="Отправить">
+            </form>
+        </div>
         <!-- Преимущества -->
-        <div class="advantages">
+        <div id='advantages' class="advantages">
             <h1>Наши преимущества</h1>
             <div class="advantages_list">
                 <ul>
@@ -331,18 +364,10 @@
         </div>
         <!--конец Преимущества -->
 
-        <div class="order">
-            <h1>Блок оставить заявку</h1>
-            <form>
-                <input type="text" name="name" id="name" placeholder="Введите имя">
-                <input type="tel" name="tel" id="tel" placeholder="Номер телефона">
-                <input type="text" name="comment" id="comment" placeholder="Комментарий">
-                <input type="button" id="send_order" value="Отправить">
-            </form>
-        </div>
+        
     </main>
     <footer >
-        <div class="footer_contact">
+        <div id="contact" class="footer_contact">
             <div class="contact">
                 <h1>Контакты</h1>
 
@@ -365,6 +390,24 @@
             </div> 
         </div>   
     </footer>
-    <script src="./index.js"></script>
+    <modal id="modal">
+        <div class="modal">
+            <div class="modal_header">
+                <h1>Оставить заявку</h1>
+                <img src="./img/icon.png" id="img_close_modal" alt="close_modal" >
+            </div>
+            
+            <form action="postOrder">
+                <input type="text" id="modal_name" name="name" placeholder="Введите ФИО">
+                <input type="tel" id="modal_tel" name="tel" placeholder="Номер телефона">
+                <input type="num" id="modal_comment" name="comment" placeholder="Возраст ребенка">
+                <input type="button" id="modal_send_order" value="Отправить">
+            </form>
+        </div>
+        
+    </modal>
+    <!-- <script src="./index.js"></script> -->
+    <!-- <script src="config.js" type="module"></script> -->
+    <script src="index.js"></script>
 </body>
 </html>
